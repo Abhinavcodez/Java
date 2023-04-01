@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 // /*Write a program that averages the synsets created for three months April, May and June. Declare and initialize variable to the synset entered for each month. Compute the average and write out the results, something like this:
 // Synsets Entered for April: 12 
 // Synsets Entered for May : 14 
@@ -76,3 +78,37 @@ Print names and marks of students who have scored more than 35 marks.*/
 /*Write a program same as the above, 
 but don’t use numbers (like 0, 1, 2…etc) to access the elements in the array.
 Declare an int variable ‘i’ and use it as an index into the arrays.*/
+import java.util.Scanner;
+
+public class java_practice {
+    public static void main(String[] args) {
+        // Create Scanner object to read user input
+        Scanner sc = new Scanner(System.in);
+
+        // Create string array for storing names of students
+        String[] names = new String[5];
+        // Create int array for storing marks obtained by the students
+        int[] marks = new int[5];
+
+        // Assign values to the elements of the arrays
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Enter name of student " + (i + 1) + ": ");
+            names[i] = sc.nextLine();
+            System.out.print("Enter marks obtained by " + names[i] + ": ");
+            marks[i] = sc.nextInt();
+            // Consume newline character left by nextInt() method
+            sc.nextLine();
+        }
+
+        // Print names and marks of students who have scored more than 35 marks
+        System.out.println("Names and marks of students who have scored more than 35 marks:");
+        for (int i = 0; i < 5; i++) {
+            if (marks[i] > 35) {
+                System.out.println(names[i] + ": " + marks[i]);
+            }
+        }
+
+        // Close the scanner
+        sc.close();
+    }
+}
