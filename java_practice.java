@@ -78,7 +78,6 @@ Print names and marks of students who have scored more than 35 marks.*/
 /*Write a program same as the above, 
 but don’t use numbers (like 0, 1, 2…etc) to access the elements in the array.
 Declare an int variable ‘i’ and use it as an index into the arrays.*/
-import java.util.Scanner;
 
 public class java_practice {
     public static void main(String[] args) {
